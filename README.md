@@ -9,7 +9,8 @@
 ## 其它版本
 - GitHub（MySQL版本）：[zhglxt](https://github.com/liuwy-dlsdys/zhglxt "WEB应用系统")
 - GitHub（Oracle版本）：[zhglxt-oracle](https://github.com/liuwy-dlsdys/zhglxt-oracle "WEB应用系统-Oracle版本")
-- GitEE（Oracle版本）：[zhglxt-oracle](https://gitee.com/liuwy_dlsdys/zhglxt-oracle "WEB应用系统-Oracle版本")
+- GitEE（Oracle版本）：[zhglxt-oracle](https://gitee.com/liuwy_project/zhglxt-oracle "WEB应用系统-Oracle版本")
+- GitEE（SpringBoot3+版本）：[zhglxt-springboot3](https://gitee.com/liuwy_project/zhglxt-springboot3 "WEB应用系统-SpringBoot3版本")
 
 ## 主要特性
 1. 完全响应式布局（支持电脑、平板、手机等所有主流设备）
