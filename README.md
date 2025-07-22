@@ -7,8 +7,8 @@
 - 感谢[RuoYi](https://gitee.com/y_project/RuoYi "若依")提供的框架
 
 ## 其它版本
-- GitHub（MySQL版本）：[zhglxt](https://github.com/liuwy-dlsdys/zhglxt "WEB应用系统")
-- GitHub（Oracle版本）：[zhglxt-oracle](https://github.com/liuwy-dlsdys/zhglxt-oracle "WEB应用系统-Oracle版本")
+- GitHub（MySQL版本）：[zhglxt](https://github.com/liuwy-project/zhglxt "WEB应用系统")
+- GitHub（Oracle版本）：[zhglxt-oracle](https://github.com/liuwy-project/zhglxt-oracle "WEB应用系统-Oracle版本")
 - GitEE（Oracle版本）：[zhglxt-oracle](https://gitee.com/liuwy_project/zhglxt-oracle "WEB应用系统-Oracle版本")
 - GitEE（SpringBoot3+版本）：[zhglxt-springboot3](https://gitee.com/liuwy_project/zhglxt-springboot3 "WEB应用系统-SpringBoot3版本")
 
