@@ -9,6 +9,7 @@
 ## 其它版本
 - GitHub（MySQL版本）：[zhglxt](https://github.com/liuwy-project/zhglxt "WEB应用系统")
 - GitHub（Oracle版本）：[zhglxt-oracle](https://github.com/liuwy-project/zhglxt-oracle "WEB应用系统-Oracle版本")
+- GitHub（springBoot3版本）：[zhglxt--springBoot3](https://github.com/liuwy-project/zhglxt-springBoot3 "WEB应用系统-springBoot3版本")
 - GitEE（Oracle版本）：[zhglxt-oracle](https://gitee.com/liuwy_project/zhglxt-oracle "WEB应用系统-Oracle版本")
 - GitEE（SpringBoot3+版本）：[zhglxt-springboot3](https://gitee.com/liuwy_project/zhglxt-springboot3 "WEB应用系统-SpringBoot3版本")
 
