@@ -4,6 +4,7 @@ import com.zhglxt.common.core.entity.sys.SysUser;
 import com.zhglxt.system.entity.SysUserRole;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -133,6 +134,16 @@ public interface ISysUserService {
      * @return 结果
      */
     public boolean updateUserAvatar(@Param("userId") String userId, @Param("avatar") String avatar);
+
+    /**
+     * 更新用户登录信息（IP和登录时间）
+     *
+     * @param userId 用户ID
+     * @param loginIp 登录IP地址
+     * @param loginDate 登录时间
+     * @return 结果
+     */
+    public void updateLoginInfo(String userId, String loginIp, Date loginDate);
 
     /**
      * 用户授权角色

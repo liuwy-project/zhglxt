@@ -6,7 +6,6 @@ import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.entity.sys.SysUser;
 import com.zhglxt.common.enums.BusinessType;
-import com.zhglxt.common.utils.DateUtils;
 import com.zhglxt.common.utils.ShiroUtils;
 import com.zhglxt.common.utils.StringUtils;
 import com.zhglxt.common.utils.file.FileUploadUtils;
@@ -83,7 +82,6 @@ public class SysProfileController extends BaseController {
         }
         user.setSalt(ShiroUtils.randomSalt());
         user.setPassword(passwordService.encryptPassword(user.getLoginName(), newPassword, user.getSalt()));
-        user.setPwdUpdateDate(DateUtils.getNowDate());
         if (userService.resetUserPwd(user) > 0) {
             ShiroUtils.setSysUser(userService.selectUserById(user.getUserId()));
             return success();
