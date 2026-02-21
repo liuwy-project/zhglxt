@@ -204,7 +204,7 @@
     <update id="updateUser" parameterType="com.zhglxt.common.core.entity.sys.SysUser">
         update sys_user
         <set>
-            <if test="deptId != 0">dept_id = #{deptId},</if>
+            <if test="deptId != null and deptId != ''">dept_id = #{deptId},</if>
             <if test="userName != null and userName != ''">user_name = #{userName},</if>
             <if test="idCard != null and idCard != ''">id_card = #{idCard},</if>
             <if test="userType != null and userType != ''">user_type = #{userType},</if>

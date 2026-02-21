@@ -3,6 +3,7 @@ package com.zhglxt.framework.manager.factory;
 import com.zhglxt.common.constant.Constants;
 import com.zhglxt.common.utils.*;
 import com.zhglxt.common.utils.spring.SpringUtils;
+import com.zhglxt.common.utils.http.UserAgentUtils;
 import com.zhglxt.framework.shiro.session.OnlineSession;
 import com.zhglxt.system.entity.SysLogininfor;
 import com.zhglxt.system.entity.SysOperLog;
@@ -10,7 +11,6 @@ import com.zhglxt.system.entity.SysUserOnline;
 import com.zhglxt.system.service.ISysOperLogService;
 import com.zhglxt.system.service.ISysUserOnlineService;
 import com.zhglxt.system.service.impl.SysLogininforServiceImpl;
-import eu.bitwalker.useragentutils.UserAgent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -79,7 +79,7 @@ public class AsyncFactory {
      * @return 任务task
      */
     public static TimerTask recordLogininfor(final String username, final String status, final String message, final Object... args) {
-        final UserAgent userAgent = UserAgent.parseUserAgentString(ServletUtils.getRequest().getHeader("User-Agent"));
+        final String userAgent = ServletUtils.getRequest().getHeader("User-Agent");
         final String ip = ShiroUtils.getIp();
         return new TimerTask() {
             @Override
@@ -95,9 +95,9 @@ public class AsyncFactory {
                 // 打印信息到日志
                 sys_user_logger.info(s.toString(), args);
                 // 获取客户端操作系统
-                String os = userAgent.getOperatingSystem().getName();
+                String os = UserAgentUtils.getOperatingSystem(userAgent);
                 // 获取客户端浏览器
-                String browser = userAgent.getBrowser().getName();
+                String browser =  UserAgentUtils.getBrowser(userAgent);
                 // 封装对象
                 SysLogininfor logininfor = new SysLogininfor();
                 logininfor.setLoginName(username);

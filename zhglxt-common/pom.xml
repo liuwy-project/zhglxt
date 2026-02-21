@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.zhglxt</groupId>
         <artifactId>zhglxt</artifactId>
-        <version>4.8.1</version>
+        <version>4.8.2</version>
     </parent>
 
     <artifactId>zhglxt-common</artifactId>
@@ -97,10 +97,10 @@
             </exclusions>
         </dependency>
 
-        <!-- yml解析器 -->
+        <!-- 解析客户端操作系统、浏览器等 -->
         <dependency>
-            <groupId>org.yaml</groupId>
-            <artifactId>snakeyaml</artifactId>
+            <groupId>nl.basjes.parse.useragent</groupId>
+            <artifactId>yauaa</artifactId>
         </dependency>
 
         <!-- servlet包 -->

@@ -52,16 +52,26 @@
                 <div class="ibox-content no-padding">
                     <div class="panel-body">
                         <div class="panel-group" id="version">
-                            <!--latest version-->
+                            <!--4.8.2-->
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h5 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#version" href="#latest_version">latest version</a><code class="pull-right">2025.05.24-2025.11.07</code>
+                                        <a data-toggle="collapse" data-parent="#version" href="#v482">v4.8.2</a><code class="pull-right">2025.05.24-2026.02.21</code>
                                     </h5>
                                 </div>
-                                <div id="latest_version" class="panel-collapse collapse in">
+                                <div id="v482" class="panel-collapse collapse in">
                                     <div class="panel-body">
                                         <ol>
+                                            <li>升级oshi到最新版本6.9.1</li>
+                                            <li>升级commons.io到最新版本2.21.0</li>
+                                            <li>修复异步树表查询条件无法带入分页问题</li>
+                                            <li>使用yauaa代替bitwalker</li>
+                                            <li>优化日志记录参数拼装提升效率</li>
+                                            <li>优化数据权限控制逻辑，放开permission限制</li>
+                                            <li>支持Excel导出对象的多个子列表</li>
+                                            <li>升级tomcat到最新版本9.0.112</li>
+                                            <li>修复comboReadDict属性下多个sheet出现的报错</li>
+                                            <li>升级Bootstrap版本到v3.4.1</li>
                                             <li>升级druid到最新版本1.2.27</li>
                                             <li>升级oshi到最新版本6.8.3</li>
                                             <li>优化代码</li>

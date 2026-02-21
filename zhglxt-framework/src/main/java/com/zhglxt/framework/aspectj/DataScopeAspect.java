@@ -1,8 +1,5 @@
 package com.zhglxt.framework.aspectj;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.zhglxt.common.annotation.DataScope;
 import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.context.PermissionContextHolder;
@@ -16,6 +13,9 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 数据过滤处理
@@ -93,7 +93,7 @@ public class DataScopeAspect
         List<String> conditions = new ArrayList<String>();
         List<String> scopeCustomIds = new ArrayList<String>();
         user.getRoles().forEach(role -> {
-            if (DATA_SCOPE_CUSTOM.equals(role.getDataScope()) && StringUtils.equals(role.getStatus(), UserConstants.ROLE_NORMAL) && StringUtils.containsAny(role.getPermissions(), Convert.toStrArray(permission)))
+            if (DATA_SCOPE_CUSTOM.equals(role.getDataScope()) && StringUtils.equals(role.getStatus(), UserConstants.ROLE_NORMAL) && (StringUtils.isEmpty(permission) || StringUtils.containsAny(role.getPermissions(), Convert.toStrArray(permission))))
             {
                 scopeCustomIds.add(Convert.toStr(role.getRoleId()));
             }
@@ -106,7 +106,7 @@ public class DataScopeAspect
             {
                 continue;
             }
-            if (!StringUtils.containsAny(role.getPermissions(), Convert.toStrArray(permission)))
+            if (StringUtils.isNotEmpty(permission) && !StringUtils.containsAny(role.getPermissions(), Convert.toStrArray(permission)))
             {
                 continue;
             }
