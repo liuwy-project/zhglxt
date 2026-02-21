@@ -111,9 +111,6 @@
         $.ajax({
             type: "post",
             url: prefix + "/getNames",
-            data: {
-                "fragment": 'fragment-cache-names'
-            },
             success: function (data) {
                 $("#cacheNames").html(data);
                 $.modal.msgSuccess("刷新缓存列表成功");
@@ -127,8 +124,7 @@
             type: "post",
             url: prefix + "/getKeys",
             data: {
-                "cacheName": _cacheName,
-                "fragment": 'fragment-cache-kyes'
+                "cacheName": _cacheName
             },
             success: function (data) {
                 $("#cacheKeys").html(data);
@@ -146,8 +142,7 @@
             url: prefix + "/getValue",
             data: {
                 "cacheName": cacheName,
-                "cacheKey": cacheKey,
-                "fragment": 'fragment-cache-value'
+                "cacheKey": cacheKey
             },
             success: function (data) {
                 $("#cacheValue").html(data);

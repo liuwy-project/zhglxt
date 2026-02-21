@@ -3,7 +3,6 @@ package com.zhglxt.system.service.impl;
 import com.zhglxt.common.annotation.DataScope;
 import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.entity.sys.SysRole;
-import com.zhglxt.common.core.entity.sys.SysUser;
 import com.zhglxt.common.core.text.Convert;
 import com.zhglxt.common.exception.ServiceException;
 import com.zhglxt.common.utils.ShiroUtils;
@@ -297,7 +296,7 @@ public class SysRoleServiceImpl implements ISysRoleService {
     @Override
     public void checkRoleDataScope(String... roleIds)
     {
-        if (!SysUser.isAdmin(ShiroUtils.getUserId()))
+        if (!ShiroUtils.isAdmin(ShiroUtils.getUserId()))
         {
             for (String roleId : roleIds)
             {

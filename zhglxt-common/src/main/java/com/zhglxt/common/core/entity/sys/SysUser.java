@@ -6,6 +6,7 @@ import com.zhglxt.common.annotation.Excel.ColumnType;
 import com.zhglxt.common.annotation.Excel.Type;
 import com.zhglxt.common.annotation.Excels;
 import com.zhglxt.common.core.entity.BaseEntity;
+import com.zhglxt.common.utils.ShiroUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -167,11 +168,7 @@ public class SysUser extends BaseEntity {
     }
 
     public boolean isAdmin() {
-        return isAdmin(this.userId);
-    }
-
-    public static boolean isAdmin(String userId) {
-        return userId != null && userId.equals("1");
+        return ShiroUtils.isAdmin(this.userId);
     }
 
     public String getDeptId() {

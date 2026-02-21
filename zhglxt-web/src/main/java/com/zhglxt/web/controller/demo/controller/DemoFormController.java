@@ -250,11 +250,10 @@ public class DemoFormController {
     /**
      * 局部刷新-添加任务
      *
-     * @param    fragment    页面中的模板名称
      * @param    taskName    任务名称
      */
     @PostMapping("/localrefresh/task")
-    public String localRefreshTask(String fragment, String taskName, ModelMap mmap) {
+    public String localRefreshTask(String taskName, ModelMap mmap) {
         JSONArray list = new JSONArray();
         JSONObject item = new JSONObject();
         item.put("name", StringUtils.defaultIfBlank(taskName, "了解各技术的使用、系统使用情况及相关重要追踪人"));
@@ -267,7 +266,7 @@ public class DemoFormController {
         item.put("date", "2020.08.09");
         list.add(item);
         mmap.put("tasks", list);
-        return prefix + "/localrefresh::" + fragment;
+        return prefix + "/localrefresh::fragment-tasklist";
     }
 
     /**

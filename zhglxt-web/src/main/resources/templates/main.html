@@ -52,6 +52,23 @@
                 <div class="ibox-content no-padding">
                     <div class="panel-body">
                         <div class="panel-group" id="version">
+                            <!--latest version-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#version" href="#latest_version">latest version</a><code class="pull-right">2026.02.21-2026.02.21</code>
+                                    </h5>
+                                </div>
+                                <div id="latest_version" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <ol>
+                                            <li>修复Excel自定义格式样式污染问题</li>
+                                            <li>修改Thymeleaf变量，防止SSTI RCE风险</li>
+                                            <li>将isAdmin方法统一到ShiroUtils</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                             <!--4.8.2-->
                             <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -59,7 +76,7 @@
                                         <a data-toggle="collapse" data-parent="#version" href="#v482">v4.8.2</a><code class="pull-right">2025.05.24-2026.02.21</code>
                                     </h5>
                                 </div>
-                                <div id="v482" class="panel-collapse collapse in">
+                                <div id="v482" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ol>
                                             <li>升级oshi到最新版本6.9.1</li>

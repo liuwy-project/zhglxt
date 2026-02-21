@@ -5,7 +5,6 @@ import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.entity.Ztree;
 import com.zhglxt.common.core.entity.sys.SysDept;
 import com.zhglxt.common.core.entity.sys.SysRole;
-import com.zhglxt.common.core.entity.sys.SysUser;
 import com.zhglxt.common.core.text.Convert;
 import com.zhglxt.common.exception.ServiceException;
 import com.zhglxt.common.utils.ShiroUtils;
@@ -292,7 +291,7 @@ public class SysDeptServiceImpl implements ISysDeptService {
     @Override
     public void checkDeptDataScope(String deptId)
     {
-        if (!SysUser.isAdmin(ShiroUtils.getUserId()) && StringUtils.isNotNull(deptId))
+        if (!ShiroUtils.isAdmin() && StringUtils.isNotNull(deptId))
         {
             SysDept dept = new SysDept();
             dept.setDeptId(deptId);

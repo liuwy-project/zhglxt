@@ -114,7 +114,7 @@ public class SysUserController extends BaseController {
     public String add(ModelMap mmap) {
         List<SysRole> sysRoles = roleService.selectRoleAll();
         List<SysRole> collect = sysRoles.stream().filter(u -> !u.getRoleId().equals("1")).collect(Collectors.toList());
-        mmap.put("roles", SysUser.isAdmin(ShiroUtils.getSysUser().getUserId())?sysRoles:collect);
+        mmap.put("roles", ShiroUtils.isAdmin(ShiroUtils.getSysUser().getUserId())?sysRoles:collect);
         mmap.put("posts", postService.selectPostAll());
         return prefix + "/add";
     }
@@ -153,7 +153,7 @@ public class SysUserController extends BaseController {
         //userService.checkUserDataScope(userId);
         List<SysRole> roles = roleService.selectRolesByUserId(userId);
         mmap.put("user", userService.selectUserById(userId));
-        mmap.put("roles", SysUser.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
+        mmap.put("roles", ShiroUtils.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
         mmap.put("posts", postService.selectPostsByUserId(userId));
         return prefix + "/edit";
     }
@@ -241,7 +241,7 @@ public class SysUserController extends BaseController {
         // 获取用户所属的角色列表
         List<SysRole> roles = roleService.selectRolesByUserId(userId);
         mmap.put("user", user);
-        mmap.put("roles", SysUser.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
+        mmap.put("roles", ShiroUtils.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
         return prefix + "/authRole";
     }
 
