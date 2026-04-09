@@ -89,6 +89,9 @@
     <!-- Spring日志级别控制  -->
     <logger name="org.springframework" level="warn"/>
 
+    <!-- Thymeleaf日志级别控制  -->
+    <Logger name="org.thymeleaf" level="error"/>
+
     <!-- Activiti日志 -->
     <logger name="org.activiti" level="ERROR"/>
 
