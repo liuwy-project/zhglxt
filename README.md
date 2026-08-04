@@ -35,7 +35,7 @@
 21. 丰富的演示示例，帮助开发者快速集成到项目中
 
 ## 技术选型
-1. 系统环境【JDK 1.8、MySQL5.7、Tomcat 9】
+1. 系统环境【JDK1.8+、MySQL5.7+、Tomcat10+】
 2. 主框架【Spring Boot】
 3. 持久层【Apache MyBatis】
 4. 视图层【Bootstrap】
