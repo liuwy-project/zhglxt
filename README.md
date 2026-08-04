@@ -4,14 +4,12 @@
 &emsp;&emsp;本系统（基于SpringBoot+MyBatis+Apache Shiro+Bootstrap+Thymeleaf） 可用于开发所有企业级WEB应用系统（如:各种后台管理系统、CRM、ERP、CMS、OA、博客、论坛等...）。
 响应式布局，支持大部分浏览器（如：IE9+浏览器、Google Chrome、火狐浏览器、360浏览器...)、平板、手机等主流设备
 
-- 感谢[RuoYi](https://gitee.com/y_project/RuoYi "若依")提供的框架
-
 ## 其它版本
 - GitHub（MySQL版本）：[zhglxt](https://github.com/liuwy-project/zhglxt "WEB应用系统")
 - GitHub（Oracle版本）：[zhglxt-oracle](https://github.com/liuwy-project/zhglxt-oracle "WEB应用系统-Oracle版本")
-- GitHub（springBoot3版本）：[zhglxt-springBoot3](https://github.com/liuwy-project/zhglxt-springBoot3 "WEB应用系统-springBoot3版本")
+- GitHub（springBoot4版本）：[zhglxt-springBoot4](https://github.com/liuwy-project/zhglxt-springBoot "WEB应用系统-springBoot4版本")
 - GitEE（Oracle版本）：[zhglxt-oracle](https://gitee.com/liuwy_project/zhglxt-oracle "WEB应用系统-Oracle版本")
-- GitEE（SpringBoot3+版本）：[zhglxt-springboot3](https://gitee.com/liuwy_project/zhglxt-springboot3 "WEB应用系统-SpringBoot3版本")
+- GitEE（SpringBoot4+版本）：[zhglxt-springboot4](https://gitee.com/liuwy_project/zhglxt-springboot "WEB应用系统-SpringBoot4版本")
 
 ## 主要特性
 1. 完全响应式布局（支持电脑、平板、手机等所有主流设备）
